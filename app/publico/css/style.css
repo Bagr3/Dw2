@@ -1,0 +1,124 @@
+
+
+
+/*RowBar*/
+
+body::-webkit-scrollbar {
+    width: 10px;
+    width: 100%;
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: black;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-image: url(/img/starrysky.jpg);
+    border-radius: 20px;
+    border: 1px solid black;
+  }
+
+body{
+    background-color: black;
+    background-image: url(/img/rustic-desk.jpg);
+    background-position: center;
+    background-size: 120%;
+}
+
+
+
+/*Seleção de elementos da página*/
+
+*::selection{
+    background-color: rgb(83, 83, 83);
+    color: black;
+}
+
+
+
+/*Navbar*/
+
+.nav-custom{
+    vertical-align: middle;
+}
+
+.head-custom li{
+    margin: 0px 20px;
+}
+
+.position-custom{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card-h-custom{
+    box-shadow: 10px 12px #333;
+}
+
+.card-h-custom:hover{
+    color: #333;
+}
+
+.card-subtitle{
+    font-size: 80%;
+}
+
+.container-custom{
+    margin-top: 6%;
+}
+
+.on{
+    color: rgb(170, 189, 206) !important;
+}
+
+.h-custom{
+    height: 4rem;
+}
+
+.img-custom{
+    max-width: 4%;
+}
+
+@media only screen and (min-width: 1000px) {
+
+    p, h1, h2, h3, h4, h5, span{
+        font-size: clamp(0, 2%, 4%);
+    }
+
+    footer{
+        bottom: 0;
+        margin: auto;
+        width: 100%;
+        text-align: center;
+    }
+
+    .video-custom{
+        max-width: 80%;
+        max-height: 10%;
+    }
+  }
+@media screen and (max-width: 1000px) {
+
+    body{
+        background: black;
+    }
+
+    p, h1, h2, h3, h4, h5, span{
+        font-size: clamp(0, 2%, 4%);
+    }
+
+    footer{
+        max-width: 100%;
+        max-block-size: 100%;
+        bottom: 0;
+        position: relative;
+        margin: auto;
+        width: 100%;
+        text-align: center;
+    }  
+
+    .video-custom{
+        max-width: 80%;
+        max-height: 8%;
+    }
+}

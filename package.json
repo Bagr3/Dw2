@@ -1,0 +1,15 @@
+{
+  "name": "dictionarysorrows",
+  "version": "1.0.0",
+  "description": "",
+  "main": "servidor.js",
+  "scripts": {
+    "dev": "nodemon app/servidor.js"
+  },
+  "author": "Bagre",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "pg": "^8.8.0"
+  }
+}
