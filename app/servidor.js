@@ -53,3 +53,12 @@ app.post('/insert', function(req, res){
 
     res.end();
 });
+
+app.get('/', function(req,res){
+
+    pool.query(`SELECT * FROM Users `,
+    
+    .then(resposta => console.log('ok'))
+    .catch(err => console.log('erro: ' + err))
+
+});

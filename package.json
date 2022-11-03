@@ -1,7 +1,6 @@
 {
   "name": "dictionarysorrows",
   "version": "1.0.0",
-  "description": "",
   "main": "servidor.js",
   "scripts": {
     "dev": "nodemon app/servidor.js"
@@ -9,7 +8,18 @@
   "author": "Bagre",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.1",
+    "express": "^4.18.2",
+    "node": "^19.0.0",
+    "nodemon": "^2.0.20",
     "pg": "^8.8.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bagr3/Dw2.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Bagr3/Dw2/issues"
+  },
+  "homepage": "https://github.com/Bagr3/Dw2#readme",
+  "description": ""
 }
