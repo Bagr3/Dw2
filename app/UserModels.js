@@ -11,4 +11,6 @@ function User(body){
     }catch(e){
         console.log(`Houve algum erro ${e}`);
     }
-};
+};  
+    
+module.exports = User;
