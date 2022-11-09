@@ -3,11 +3,12 @@
   "version": "1.0.0",
   "main": "servidor.js",
   "scripts": {
-    "dev": "nodemon app/servidor.js"
+    "dev": "nodemon server.js"
   },
   "author": "Bagre",
   "license": "ISC",
   "dependencies": {
+    "ejs": "^3.1.8",
     "express": "^4.18.2",
     "node": "^19.0.0",
     "nodemon": "^2.0.20",
