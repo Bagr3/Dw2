@@ -30,3 +30,10 @@ exports.trataPost =  async (req, res) =>{
     res.render("index");    
 }
 
+exports.editar =  async (req, res) =>{
+    if (req.url == "/editar"){
+        const estudantes = await User.searchUsersPorCpf(req.body);
+        User.editar(req.body)
+    }
+    res.render("exibir", { users});    
+}

@@ -13,6 +13,16 @@ function User(body){
     }
 };
 
+ User.searchUsersPorCpf = async (body) => {
+  try{
+      const user = await pool.query('SELECT * FROM Users WHERE cpf = $1 order by id');
+      [body.cpf]
+      return user.rows;
+  }catch(e){
+      console.log(`Houve algum erro ${e}`);
+  }
+};
+
  User.insert = async (body) =>{
       try {
         await pool.query(`INSERT INTO Users (cpf, nameUser, email, password, tel, msg, country)
