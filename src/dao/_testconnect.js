@@ -1,9 +1,12 @@
-// const db = require('./conexao');
+require("dotenv").config()
 
-// async function connect(){
-//     await db.connect();
-//     console.log('Conectou ao banco');
-//     await db.end();
-// }
+const db = require('./conexao');
+async function connect() {
+    
+    await db.connect(); 
+    console.log('Conectou ao banco'); 
+    await db.end(); 
 
-// connect();
+}
+
+connect();

@@ -253,13 +253,9 @@ body{
 .card_organizer{
     display: flex;
     flex-wrap: wrap;
-    margin-top: 5%;
     margin-bottom: 5%;
+    margin-top: 5%;
     justify-content: space-around;
-}
-
-.card_organizer2{
-    margin-top: 10%;
 }
 
 .first_part{
@@ -360,10 +356,6 @@ body{
  align-items: center;
  text-align: center;
  justify-content: center;
-}
-
-.navbar-brand{
-    margin-left: 10%;
 }
 
 .img_book{

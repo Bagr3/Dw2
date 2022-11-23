@@ -1,3 +1,4 @@
+const { render } = require("ejs");
 const User = require("../models/UserModels");
 
 exports.index = (req, res) =>{
@@ -18,6 +19,7 @@ exports.wwa = (req, res) =>{
 
 exports.exibir = async (req, res) =>{
     const users = await User.searchUsers();
+    console.log(users)
     res.render("exibir", { users });
 }
 
