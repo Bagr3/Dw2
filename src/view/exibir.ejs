@@ -37,6 +37,8 @@
               <td>Telefone</td>
               <td>Message</td>
               <td>Country</td>
+              <td><img src="img/lixeira2.png" alt=""></td>
+              <td><img src="img/editar3.png" alt=""></td>
             </tr>
 
             <% users.forEach(user=> { %>
@@ -63,6 +65,8 @@
                 <td>
                   <%= user.country%>
                 </td>
+                <td> <a href=""> <img class="img_listar"  src="img/lixeira2.png" alt=""> </a> </td>
+                <td> <a href=""> <img class="img_listar" src="img/editar3.png" alt=""> </a> </td>
               </tr>
 
               <% }) %>
@@ -71,7 +75,6 @@
           <hr>
           <a href="/" class="btn btn-dark">Voltar</a>
         </div>
-        </form>
       </div>
       <div class="col-lg-2"></div>
     </div>

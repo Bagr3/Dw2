@@ -459,3 +459,8 @@ body{
     text-align: center;
     font-size: 24px;
 }
+
+.img_listar{
+    width: 50%;
+    height: 50%;
+}
