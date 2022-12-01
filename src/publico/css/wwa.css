@@ -1,0 +1,27 @@
+.container-wwa{
+    height: 735px;
+    width: 1000px;
+}
+
+.container-img{
+    height: 200px !important;
+    width: 200px !important;
+    margin: 200px auto 0 auto !important;
+    border: 5px white solid;
+    border-radius: 100px;
+}
+
+.container-img img{
+    height: 190px;
+    width: 190px;
+    border-radius: 100px;
+}
+
+.container-fluid{
+    display: flex !important;
+}
+
+.container-img{
+    align-items: center !important;
+    justify-content: center !important;
+}
