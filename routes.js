@@ -13,15 +13,14 @@ route.get('/wwa', homeController.wwa);
 
 route.get('/exibir', homeController.exibir);
 
-route.post('/insert', homeController.trataPost ,function(req, res){
-    console.log(`
-    req.body.nameUser = ${req.body.nameUser}
-    req.body.cpf = ${req.body.cpf}
-    req.body.email = ${req.body.email}
-    req.body.password = ${req.body.password}
-    req.body.tel = ${req.body.tel}
-    req.body.msg = ${req.body.msg}
-    req.body.country = ${req.body.country}`);
-});
+route.get("/exibir/:cpf", homeController.pesquisa);
+
+route.post("/pesquisar", homeController.pesquisa);
+
+route.get("/editar")
+
+route.post('/insert', homeController.trataPost);
+
+route.get("/editar/:cpf", homeController.editarMostrar);
 
 module.exports = route;

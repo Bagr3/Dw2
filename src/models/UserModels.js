@@ -15,13 +15,32 @@ function User(body){
 
  User.searchUsersPorCpf = async (body) => {
   try{
-      const user = await pool.query('SELECT * FROM Users WHERE cpf = $1 order by id');
+      const user = await pool.query('SELECT * FROM Users WHERE cpf = $1 order by id');        
       [body.cpf]
       return user.rows;
   }catch(e){
       console.log(`Houve algum erro ${e}`);
   }
 };
+
+ User.buscaPorNome = async(body) => {
+  try {
+    body.nome = String(body.nome).trim();
+    body.nome = body.nome.replace(' ', '%');
+    const user = await client.query(
+      `
+      SELECT *
+      FROM Users
+      WHERE upper(nameUser) LIKE upper('%${body.nome}%')
+      ORDER BY Users.id
+      `
+    );
+    return user.rows;
+  } catch (e) {
+    console.log(e)
+  }
+}
+
 
  User.insert = async (body) =>{
       try {

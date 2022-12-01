@@ -27,13 +27,28 @@ exports.trataPost =  async (req, res) =>{
     if (req.url == "/insert"){
         User.insert(req.body)
     }
-    res.render("index");    
+    res.redirect("/");    
 }
 
-exports.editar =  async (req, res) =>{
-    if (req.url == "/editar"){
-        const estudantes = await User.searchUsersPorCpf(req.body);
-        User.editar(req.body)
-    }
-    res.render("exibir", { users});    
+exports.pesquisa = async (req , res) => {
+
+    const users = await User.buscaPorNome(req.params);
+    console.log(req.params.nameUser);
+
+    res.render("exibir" , {users} )
+
+}
+
+exports.editarMostrar =  async (req, res) =>{
+
+    const Users = await User.searchUsersPorCpf(req.params)[0];
+
+    res.render(editar);    
+}
+
+exports.editarReceber = async (req, res) => {
+     if (req.url == "/editar"){
+        const User = await User.update(req.body);
+     }
+     res.redirect("/listar");
 }
