@@ -1,0 +1,12 @@
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img_listar{
+    width: 85%;
+    height: 85%;
+}
+

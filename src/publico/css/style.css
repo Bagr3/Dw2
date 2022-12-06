@@ -203,7 +203,6 @@ body{
 
 /*Conteudo samuel*/
 
-
 @media only screen and (max-width: 400px) {
     #bot{
         display: flex;
@@ -256,6 +255,11 @@ body{
     margin-bottom: 5%;
     margin-top: 5%;
     justify-content: space-around;
+}
+
+.info2{
+    align-items: center;
+    justify-content: center;
 }
 
 .first_part{
@@ -458,9 +462,4 @@ body{
     margin-top: 15px;
     text-align: center;
     font-size: 24px;
-}
-
-.img_listar{
-    width: 50%;
-    height: 50%;
 }
