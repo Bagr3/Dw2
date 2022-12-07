@@ -1,4 +1,11 @@
+.container-wwa-fabio{
+    margin-top: -180px;
+    height: 735px;
+    width: 1000px;
+}
+
 .container-wwa{
+    margin-top: -320px;
     height: 735px;
     width: 1000px;
 }
@@ -24,4 +31,14 @@
 .container-img{
     align-items: center !important;
     justify-content: center !important;
+}
+
+.text-wwa{
+    text-align: center;
+    font-size: 22px;
+    text-decoration: underline;
+}
+
+.p-wwa{
+    text-align: center;
 }
