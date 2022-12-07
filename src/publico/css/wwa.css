@@ -1,3 +1,20 @@
+@media only screen and (max-width: 700px) {
+    .contain{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+    .container-wwa{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+    body{
+        width: 400%;
+        height: 200%;
+    }
+}
+
 .container-wwa-fabio{
     margin-top: -180px;
     height: 735px;
@@ -42,3 +59,4 @@
 .p-wwa{
     text-align: center;
 }
+

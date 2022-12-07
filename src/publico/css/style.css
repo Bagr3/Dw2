@@ -8,6 +8,7 @@
 /*Background image*/
  
   body{
+    width: 100%;
     background-image: url(/img/ceu-estrelado_1048-11828.jpg);
   }
 
@@ -119,11 +120,11 @@ body{
         max-width: 100%;
         max-block-size: 100%;
         bottom: 0;
-        position: relative;
         margin: auto;
         width: 100%;
         text-align: center;
     }  
+
 
     .video-custom{
         max-width: 80%;
@@ -141,6 +142,7 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    position: relative;
 }
 
 #footer .footer-content {
