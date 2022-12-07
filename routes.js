@@ -21,8 +21,6 @@ route.get('/deletar/:id', homeController.DeletarId);
 
 route.get("/exibir/:id", homeController.pesquisa);
 
-route.post("/pesquisar", homeController.pesquisa);
-
 route.post('/insert', homeController.trataPost);
 
 module.exports = route;

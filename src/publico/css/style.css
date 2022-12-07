@@ -249,6 +249,14 @@ body{
     height: 200px;
 }
 
+.row{
+    margin-top: 5%;
+}
+
+.btn{
+    margin-bottom: 5%;
+}
+
 .card_organizer{
     display: flex;
     flex-wrap: wrap;
