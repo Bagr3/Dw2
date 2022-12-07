@@ -13,11 +13,10 @@ function User(body){
     }
 };
 
- User.searchUsersPorCpf = async (body) => {
+ User.searchUsersPorId = async (id) => {
   try{
-      const user = await pool.query('SELECT * FROM Users WHERE cpf = $1 order by id');        
-      [body.cpf]
-      return user.rows;
+      const user = await pool.query('SELECT * FROM Users WHERE id = $1', [id]);        
+        return user.rows[0];
   }catch(e){
       console.log(`Houve algum erro ${e}`);
   }
@@ -27,7 +26,7 @@ function User(body){
   try {
     body.nome = String(body.nome).trim();
     body.nome = body.nome.replace(' ', '%');
-    const user = await client.query(
+    const user = await pool.query(
       `
       SELECT *
       FROM Users
@@ -54,24 +53,24 @@ function User(body){
       }
  }
 
-User.update = async (body) => {
+User.update = async (body, id) => {
   try {
-    await client.query(
-      'UPDATE Users SET nameUser = $1, cpf = $2, email = $3, password = $4, tel = $5, msg = $6, coutry = $7  WHERE cpf = $8'
-      [body.cpf, body.nameUser, body.email, body.password, body.tel,
-      body.msg, body.country]);
+    console.log(id);
+    console.log(body);
+    await pool.query('UPDATE Users SET cpf = $1, nameUser = $2, email = $3, password = $4, tel = $5, msg = $6, country = $7  WHERE id = $8',  [body.cpf, body.nameUser, body.email, body.password, body.tel, body.msg, body.country, id]);
   } catch (e) {
     console.log(`Houve um erro ${e}`);
   }
+};
 
-  User.deleteCpf = async (body) => {
+  User.deleteId = async (body) => {
     try {
-      await client.query("DELETE FROM Users WHERE cpf = $1", [body.cpf]);
+      await pool.query("DELETE FROM Users WHERE id = $1", [body.id]);
     } catch (e) {
       console.log(e);
     }
   };
 
-};
+
     
 module.exports = User;

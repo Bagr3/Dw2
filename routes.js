@@ -13,14 +13,16 @@ route.get('/wwa', homeController.wwa);
 
 route.get('/exibir', homeController.exibir);
 
-route.get("/exibir/:cpf", homeController.pesquisa);
+route.get('/editar/:id', homeController.editar);
+
+route.post('/editarsalvo/:id', homeController.editarsalvo);
+
+route.get('/deletar/:id', homeController.DeletarId);
+
+route.get("/exibir/:id", homeController.pesquisa);
 
 route.post("/pesquisar", homeController.pesquisa);
 
-route.get("/editar")
-
 route.post('/insert', homeController.trataPost);
-
-route.get("/editar/:cpf", homeController.editarMostrar);
 
 module.exports = route;

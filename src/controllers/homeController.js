@@ -17,9 +17,19 @@ exports.wwa = (req, res) =>{
     res.render("wwa");
 }
 
+exports.editar =  async (req, res) =>{
+    const user = await User.searchUsersPorId(req.params.id);
+    res.render("editar", { user });
+}
+
+exports.editarsalvo =  async (req, res) =>{
+    console.log(req.body)
+    await User.update(req.body, req.params.id);
+    res.redirect("/exibir");
+}
+
 exports.exibir = async (req, res) =>{
     const users = await User.searchUsers();
-    console.log(users)
     res.render("exibir", { users });
 }
 
@@ -36,19 +46,11 @@ exports.pesquisa = async (req , res) => {
     console.log(req.params.nameUser);
 
     res.render("exibir" , {users} )
-
 }
 
-exports.editarMostrar =  async (req, res) =>{
+exports.DeletarId =  async (req, res) =>{
+   
+   await User.deleteId(req.params);
 
-    const Users = await User.searchUsersPorCpf(req.params)[0];
-
-    res.render(editar);    
-}
-
-exports.editarReceber = async (req, res) => {
-     if (req.url == "/editar"){
-        const User = await User.update(req.body);
-     }
-     res.redirect("/listar");
+    res.redirect("/exibir");    
 }
