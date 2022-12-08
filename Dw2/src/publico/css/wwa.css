@@ -1,0 +1,62 @@
+@media only screen and (max-width: 700px) {
+    .contain{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+    .container-wwa{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+    body{
+        width: 400%;
+        height: 200%;
+    }
+}
+
+.container-wwa-fabio{
+    margin-top: -180px;
+    height: 735px;
+    width: 1000px;
+}
+
+.container-wwa{
+    margin-top: -320px;
+    height: 735px;
+    width: 1000px;
+}
+
+.container-img{
+    height: 200px !important;
+    width: 200px !important;
+    margin: 200px auto 0 auto !important;
+    border: 5px white solid;
+    border-radius: 100px;
+}
+
+.container-img img{
+    height: 190px;
+    width: 190px;
+    border-radius: 100px;
+}
+
+.container-fluid{
+    display: flex !important;
+}
+
+.container-img{
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.text-wwa{
+    text-align: center;
+    font-size: 22px;
+    text-decoration: underline;
+}
+
+.p-wwa{
+    text-align: center;
+}
+
