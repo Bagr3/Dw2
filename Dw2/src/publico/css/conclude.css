@@ -1,0 +1,17 @@
+    .c-loader {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20%;
+    animation: is-rotating 1s infinite;
+    border: 6px solid #5c5c5c;
+    border-radius: 50%;
+    border-top-color: #ffffff;
+    height: 50px;
+    width: 50px;
+  }
+  
+  @keyframes is-rotating {
+    to {
+      transform: rotate(1turn);
+    }
+  }

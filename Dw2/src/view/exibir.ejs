@@ -1,0 +1,75 @@
+<%- include('./includes/head'); %>
+<link rel="stylesheet"  type="text/css" href="css/exibir.css">
+
+<body>
+
+  <%- include('./includes/nav'); %>
+
+
+  <div class="container">
+    <div class="row">
+
+ 
+        <h1 class="text-center">Seu Perfil</h1>
+        <p class="text-center lead">Seus dados estão abaixo</p>
+
+        
+
+        <div class="responsive-table">
+          <table class="table my-3 text-light" color>
+            <tr>
+              <td>CPF</td>
+              <td>Nome</td>
+              <td>Email</td>
+              <td>Password</td>
+              <td>Telefone</td>
+              <td>Message</td>
+              <td>Country</td>
+              <td>Remover</td>
+              <td>editar</td>
+        
+        
+      </tr>
+
+            <% users.forEach(user=> { %>
+
+              <tr>
+                <td>
+                  <%= user.cpf%>
+                </td>
+                <td>
+                  <%= user.nameuser%>
+                </td>
+                <td>
+                  <%= user.email%>
+                </td>
+                <td>
+                  <%= user.password%>
+                </td>
+                <td>
+                  <%= user.tel%>
+                </td>
+                <td>
+                  <%= user.msg%>
+                </td>
+                <td>
+                  <%= user.country%>
+                </td>
+                <td> <a href="/deletar/<%= user.id%>"> <img class="img_listar"  src="img/lixeira2.png" alt=""> </a> </td>
+                <td> <a href="/editar/<%= user.id%>"> <img class="img_listar" src="img/editar3.png" alt=""> </a> </td>
+              </tr>
+
+              <% }) %>
+
+          </table>
+          <hr>
+          <a href="/" class="btn btn-dark">Voltar</a>
+        </div>
+
+      <div class="col-lg-2"></div>
+    </div>
+  </div>
+  
+  <%- include('./includes/footer'); %>
+
+  <%- include('./includes/scripts'); %>
